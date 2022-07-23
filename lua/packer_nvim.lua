@@ -54,6 +54,9 @@ return packer.startup {
 			commit = commits.packer_nvim,
 		}
 
+		use {
+			'rmagatti/alternate-toggler'
+		}
 		-- Improve Start-UP time
 		use { -- Speed up loading Lua modules in Neovim to improve startup time.
 			'lewis6991/impatient.nvim',

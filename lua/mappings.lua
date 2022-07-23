@@ -96,6 +96,10 @@ keymap('t', '<Esc>', '<c-\\><c-n>', options)
 keymap('v', 'J', ":m '>+1<CR>gv=gv", options)
 keymap('v', 'K', ":m '<-2<CR>gv=gv", options)
 
+
+keymap('n', '`', ':ToggleAlternate <CR>', options)
+
+
 -- smart deletion, dd
 -- It solves the issue, where you want to delete empty line, but dd will override you last yank.
 -- Code above will check if u are deleting empty line, if so - use black hole register.
