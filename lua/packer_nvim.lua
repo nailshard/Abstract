@@ -69,7 +69,7 @@ return packer.startup {
 		}
 
 		use { -- colorscheme for (neo)vim written in lua specially made for Abstract
-			'Abstract-IDE/Abstract-cs',
+			'nailshard/Abstract-cs',
 			-- commit = commits.Abstract_cs,
 			branch = 'v2',
 		}
@@ -311,6 +311,20 @@ return packer.startup {
 
 			config = [[ require('plugins/nvim-ts-autotag') ]]
 		}
+
+
+		use({
+			"mcauley-penney/tidy.nvim",
+			config = function()
+				require("tidy").setup()
+			end
+		})
+
+
+		-- use {
+		-- 	'nmac427/guess-indent.nvim',
+		-- 	config = function() require('guess-indent').setup {} end,
+		-- }
 		-- ━━━━━━━━━━━━━━❰ end of DEVELOPMENT ❱━━━━━━━━━━━━━ --
 
 
@@ -325,4 +339,3 @@ return packer.startup {
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━❰ end configs ❱━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-

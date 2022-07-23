@@ -90,7 +90,7 @@ local icon_comp = b_components.cache_file_icon({ default = '', hl_colors = {'
 
 basic.file = {
     hl_colors = {
-        default = { 'white', 'black_light' },
+        default = { 'white', 'purple' }, --black_light' },
     },
     text = function(bufnr)
         return {
@@ -99,7 +99,7 @@ basic.file = {
             { ' ', 'default' },
             { b_components.cache_file_name('[No Name]', ''), '' },
             { b_components.file_modified(' '), '' },
-            -- { b_components.cache_file_size(), '' },
+            { b_components.cache_file_size(), '' },
         }
     end,
 }
@@ -303,4 +303,3 @@ windline.setup({
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━❰ end Mappings ❱━━━━━━━━━━━━━━━━--
 --━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━--
-

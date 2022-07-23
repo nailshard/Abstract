@@ -38,7 +38,7 @@ local configs = {
 
 	-- backup related options
 	backup = true, -- make backups before writing
-	undofile = false, -- persistent undos - undo after you re-open the file
+	undofile = true, -- persistent undos - undo after you re-open the file
 	writebackup = true, -- Make backup before overwriting the current buffer
 	backupcopy = 'yes', -- Overwrite the original backup file
 	directory = backup_dir .. '/swap', -- directory to place swap files in
@@ -52,8 +52,9 @@ local configs = {
 	showmatch = true, -- show the matching part of the pair for [] {} and ()
 
 	cursorline = true, -- highlight current line
+	cursorcolumn = true, -- highlight current column
 	number = true, -- show line numbers
-	relativenumber = false, -- show relative line number
+	relativenumber = true, -- show relative line number
 
 	incsearch = true, -- incremental search
 	hlsearch = true, -- highlighted search results
@@ -88,6 +89,7 @@ local configs = {
 
 	wildignore = vim.opt.wildignore + '*.o,*.rej,*.so', -- patterns to ignore during file-navigation
 	completeopt = 'menuone,noselect,noinsert', -- completion options
+
 }
 
 -- apply colorscheme without throwing any errors
@@ -163,6 +165,17 @@ vim.api.nvim_create_autocmd(
 	}
 )
 
+-- vim.api.nvim_create_autocmd(
+-- 	"BufEnter",
+-- 	{
+-- 		desc = "don't auto comment new line",
+-- 		pattern = "*",
+-- 		group = group,
+-- -- 		command = ":hi CursorColumn cterm=NONE ctermbg=grey ctermfg=white guibg=grey guifg=white",
+-- 		command = ":hi CursorColumn term=reverse ctermbg=237 guibg=Grey8"
+-- 	}
+-- )
+
 -- ━━━━━━━━━━━━━━━━❰ end of Automate ❱━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
@@ -170,4 +183,3 @@ vim.api.nvim_create_autocmd(
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━❰ end of Plugin-Independent Configs ❱━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
