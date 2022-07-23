@@ -199,7 +199,7 @@ def main():
     else:
         if need_to_clone_abstract():
             print("\n")
-            clone_repro(CONFIG, "https://github.com/Abstract-IDE/Abstract", "nvim")
+            clone_repro(CONFIG, "https://github.com/nailshard/Abstract", "nvim")
 
         else:
             # prevent copying or removing if setup.up is running from ~/.config/nvim/
@@ -245,4 +245,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
