@@ -320,7 +320,55 @@ return packer.startup {
 			end
 		})
 
+		use {
+			'AckslD/nvim-revJ.lua',
+			requires = {'kana/vim-textobj-user', 'sgur/vim-textobj-parameter'},
+			config = function()
+				require("revj").setup{
+					brackets = {first = '([{<', last = ')]}>'}, -- brackets to consider surrounding arguments
+					new_line_before_last_bracket = true, -- add new line between last argument and last bracket (only if no last seperator)
+					add_seperator_for_last_parameter = true, -- if a seperator should be added if not present after last parameter
+					enable_default_keymaps = false, -- enables default keymaps without having to set them below
+					keymaps = {
+						operator = '<Leader>J', -- for operator (+motion)
+						line = '<Leader>j', -- for formatting current line
+						visual = '<Leader>j', -- for formatting visual selection
+					},
+					parameter_mapping = ',', -- specifies what text object selects an arguments (ie a, and i, by default)
+					-- if you're using `vim-textobj-parameter` you can also set this to `vim.g.vim_textobj_parameter_mapping`
+				}
+			end
+			-- or
+			-- requires = {'wellle/targets.vim'},
+			-- or ...
+		}
 
+		use {
+			'yamatsum/nvim-cursorline',
+			config = function()
+				require('nvim-cursorline').setup {
+					cursorline = {
+						enable = true,
+						timeout = 1000,
+						number = false,
+					},
+					cursorword = {
+						enable = true,
+						min_length = 3,
+						hl = { underline = true },
+					}
+				}
+			end
+		}
+		use {
+			's1n7ax/nvim-comment-frame',
+			requires = {
+				{ 'nvim-treesitter' }
+			},
+			config = function()
+				require('nvim-comment-frame').setup()
+			end
+		}
 		-- use {
 		-- 	'nmac427/guess-indent.nvim',
 		-- 	config = function() require('guess-indent').setup {} end,
