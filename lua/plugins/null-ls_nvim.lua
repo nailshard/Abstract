@@ -60,7 +60,8 @@ if vim.fn.executable("clang-format") == 1 then
 			"-assume-filename",
 			"$FILENAME",
 			"-style",
-			"{BasedOnStyle: Microsoft, UseTab: Always}",
+			"{BasedOnStyle: LLVM, IndentWidth: 4}",
+			--"{BasedOnStyle: LLVM, UseTab: Always, IndentWidth: 8}",
 		},
 		to_stdin = true,
 	})
@@ -184,4 +185,3 @@ keymap('n', 'gf', '<ESC>:lua vim.lsp.buf.format{ async=true }<CR>', {noremap = t
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━❰ end Mappings ❱━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
-
