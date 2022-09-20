@@ -6,7 +6,7 @@ local fn = vim.fn
 local cmd = vim.cmd
 
 local function highlight(group, fg, bg)
-	cmd("highlight " .. group .. " guifg=" .. fg .. " guibg=" .. bg)
+	cmd("highlight " .. group .. " fg=" .. fg .. " bg=" .. bg)
 end
 -------------------------------------------------------
 

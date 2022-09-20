@@ -82,7 +82,7 @@ return packer.startup {
 			requires = {
 				{ -- Companion plugin for nvim-lspconfig that allows you to seamlessly install LSP servers locally (inside :echo stdpath("data")).
 					'williamboman/mason.nvim',
-					branch = "alpha",
+					--[[ branch = "alpha", ]]
 					requires = {
 						'williamboman/mason-lspconfig.nvim',
 					},

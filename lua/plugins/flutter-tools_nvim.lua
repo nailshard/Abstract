@@ -62,7 +62,7 @@ require("telescope").load_extension("flutter")
 -- FlutterPopupBorder        - this changes the highlight of the popup border.
 -- FlutterPopupSelected      - this changes the highlight of the popup's selected line.
 
-vim.cmd([[ autocmd VimEnter *.dart highlight FlutterWidgetGuides guifg=#8C8C8C ]])
+vim.cmd([[ autocmd VimEnter *.dart highlight FlutterWidgetGuides fg=#8C8C8C ]])
 
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 -- ━━━━━━━━━━━━━━━━━❰ end configs ❱━━━━━━━━━━━━━━━━━ --

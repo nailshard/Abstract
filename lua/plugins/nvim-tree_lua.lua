@@ -18,7 +18,7 @@ local keymap = vim.api.nvim_set_keymap
 local options = {noremap = true, silent = true}
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local cmd = vim.cmd -- execute Vim commands
-cmd('autocmd ColorScheme * highlight highlight NvimTreeBg guibg=None')
+cmd('autocmd ColorScheme * highlight highlight NvimTreeBg bg=None')
 cmd('autocmd FileType NvimTree setlocal winhighlight=Normal:NvimTreeBg')
 
 

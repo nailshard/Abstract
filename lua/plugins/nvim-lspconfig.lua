@@ -129,20 +129,20 @@ local function setup_lsp_config()
 	api.nvim_command [[ sign define DiagnosticSignInfo  text= texthl=DiagnosticSignInfo  linehl= numhl= ]]
 	api.nvim_command [[ sign define DiagnosticSignHint  text= texthl=DiagnosticSignHint  linehl= numhl= ]]
 
-	api.nvim_command [[ hi DiagnosticUnderlineError cterm=underline gui=underline guisp=#840000 ]]
-	api.nvim_command [[ hi DiagnosticUnderlineHint cterm=underline  gui=underline guisp=#07454b ]]
-	api.nvim_command [[ hi DiagnosticUnderlineWarn cterm=underline  gui=underline guisp=#2f2905 ]]
-	api.nvim_command [[ hi DiagnosticUnderlineInfo cterm=underline  gui=underline guisp=#265478 ]]
+	api.nvim_command [[ hi DiagnosticUnderlineError cterm=underline gui=underline sp=#840000 ]]
+	api.nvim_command [[ hi DiagnosticUnderlineHint cterm=underline  gui=underline sp=#07454b ]]
+	api.nvim_command [[ hi DiagnosticUnderlineWarn cterm=underline  gui=underline sp=#2f2905 ]]
+	api.nvim_command [[ hi DiagnosticUnderlineInfo cterm=underline  gui=underline sp=#265478 ]]
 
 	-- Auto-format files prior to saving them
 	-- vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)]]
 
 	--[[
 	" to change colors, it's better to define in color scheme
-	" highlight LspDiagnosticsUnderlineError         guifg=#EB4917 gui=undercurl
-	" highlight LspDiagnosticsUnderlineWarning       guifg=#EBA217 gui=undercurl
-	" highlight LspDiagnosticsUnderlineInformation   guifg=#17D6EB gui=undercurl
-	" highlight LspDiagnosticsUnderlineHint          guifg=#17EB7A gui=undercurl
+	" highlight LspDiagnosticsUnderlineError         fg=#EB4917 gui=undercurl
+	" highlight LspDiagnosticsUnderlineWarning       fg=#EBA217 gui=undercurl
+	" highlight LspDiagnosticsUnderlineInformation   fg=#17D6EB gui=undercurl
+	" highlight LspDiagnosticsUnderlineHint          fg=#17EB7A gui=undercurl
 	--]]
 end
 

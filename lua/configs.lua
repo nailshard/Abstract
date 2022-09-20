@@ -172,8 +172,8 @@ vim.api.nvim_create_autocmd(
 -- 		desc = "don't auto comment new line",
 -- 		pattern = "*",
 -- 		group = group,
--- -- 		command = ":hi CursorColumn cterm=NONE ctermbg=grey ctermfg=white guibg=grey guifg=white",
--- 		command = ":hi CursorColumn term=reverse ctermbg=237 guibg=Grey8"
+-- -- 		command = ":hi CursorColumn cterm=NONE ctermbg=grey ctermfg=white bg=grey fg=white",
+-- 		command = ":hi CursorColumn term=reverse ctermbg=237 bg=Grey8"
 -- 	}
 -- )
 

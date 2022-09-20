@@ -27,7 +27,7 @@ surround.setup({
 		delete = "ds",
 		change = "cs",
 	},
-	delimiters = {
+	surrounds = {
 		pairs = {
 			["("] = { "( ", " )" },
 			[")"] = { "(", ")" },
@@ -76,7 +76,7 @@ surround.setup({
 			["s"] = { ")", "]", "}", ">", "'", '"', "`" }, -- Any surrounding delimiter
 		},
 	},
-	highlight_motion = { -- Highlight before inserting/changing surrounds
+	highlight = { -- Highlight before inserting/changing surrounds
 		duration = 0,
 	}
 })

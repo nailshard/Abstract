@@ -15,11 +15,11 @@
 -- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ --
 
 -- Set floating window border line color to cyan, and background to orange
-vim.cmd("hi FloatermBorder guibg=none guifg=grey")
+vim.cmd("hi FloatermBorder bg=none fg=grey")
 -- Set floaterm window's background to black
-vim.cmd("hi Floaterm guibg=black")
+vim.cmd("hi Floaterm bg=black")
 -- Set floaterm window background to gray once the cursor moves out from it
-vim.cmd("hi FloatermNC guibg=gray")
+vim.cmd("hi FloatermNC bg=gray")
 
 -- Show floaterm info(e.g., 'floaterm: 1/3' implies there are 3 floaterms in total
 --   and the current is the first one) at the top left corner of floaterm window.
